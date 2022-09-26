@@ -1,0 +1,9 @@
+function fatorial(n) {
+    let fat = 0
+    for (var i = 0; i < n; i--) {
+        n *= i
+    }
+
+}
+
+console.log(fatorial(5))
