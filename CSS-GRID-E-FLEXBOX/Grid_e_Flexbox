@@ -105,6 +105,8 @@ Podemos usar **4 valores**:
 ### Self
 
 `justify-self` e `align-self` vai nos permitir alinhar o item em si.
+ 
+Faz a mesma coisa que o `justify-items` e o `align-items`. Porém, é aplicado diretamente no item de um grid.
 
 
 
