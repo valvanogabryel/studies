@@ -22,14 +22,22 @@ const userList =
 [
     {
         name: 'Gabryel',
-        username: 'dan'
+        username: 'gb.'
     },
+    {
+        name: 'James',
+        username: 'J'
+    },
+    {
+        name: 'Claire',
+        username: 'cleire'
+    }
 ]
 
 const newUser = 
 {
     name: 'Gabryel',
-    username: 'dan'
+    username: 'gb.'
 }
 
 const hasUser = userList.find((user) => {
