@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício CSS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cor_data: #008080;
+            --cor_data: #00abab;
             --cor_bg_post: #fffafa;
         }
 
@@ -24,12 +26,15 @@
         }
 
         .content-container {
-            width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
             margin: 30px auto;
-
         }
 
-        section {
+        .post-container {
             width: 60%;
             margin: auto;
         }
@@ -45,7 +50,7 @@
         .blog-title {
             font-family: 'Open Sans', sans-serif;
             margin: 15px 0;
-            font-size: 1.9rem;
+            font-size: 1.7rem;
         }
 
         p {
@@ -62,7 +67,7 @@
 
 <body>
     <main class="content-container">
-        <section>
+        <section class="post-container">
             <h3 class="dates">21 DE DEZEMBRO DE 2022</h3>
             <h1 class="blog-title">Primeira Publicação do Blog</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda porro est culpa? Nisi asperiores
@@ -70,7 +75,7 @@
                 officia aliquam.</p>
         </section>
         <hr>
-        <section>
+        <section class="post-container">
             <h3 class="dates">23 DE DEZEMBRO DE 2022</h3>
             <h1 class="blog-title">Segunda Publicação do Blog</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda porro est culpa? Nisi asperiores
@@ -78,13 +83,14 @@
                 officia aliquam.</p>
         </section>
         <hr>
-        <section>
+        <section class="post-container">
             <h3 class="dates">23 DE DEZEMBRO DE 2022</h3>
             <h1 class="blog-title">Terceira Publicação do Blog</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda porro est culpa? Nisi asperiores
                 accusantium in inventore delectus velit dolore earum iure, optio temporibus. Incidunt illo illum facere
                 officia aliquam.</p>
         </section>
+
     </main>
 </body>
 
