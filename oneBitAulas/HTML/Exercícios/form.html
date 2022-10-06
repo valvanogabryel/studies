@@ -1,20 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário Pesquisa</title>
+    <title>Exercício Formulário</title>
 </head>
 
 <body>
-    <h3>Encontre no Google:</h3>
-    <form action="https:://www.google.com/search">
-        <label for="search"></label>
-        <input type="text" name="search" id="search" placeholder="Pesquise algo...">
-        <input type="submit" value="Pesquisar">
-
+    <h3>Cadastro da liga dos astronautas</h3>
+    <form action="">
+        <secion>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name">
+        </secion>
+        <br>
+        <br>
+        <section>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <label for="passwrod">- Senha:</label>
+            <input type="password" name="password" id="password">
+        </section>
+        <br>
+        <section>
+            <label for="nasc">Data de Nascimento:</label>
+            <input type="date" name="nasc" id="nasc">
+            <label for="photo">- Foto:</label>
+            <input type="file" name="photo" id="photo">
+        </section>
+        <br>
+        <section>
+            <label for="nationality">Nacionalidade</label>
+            <select name="nationality" id="nationality">
+                <optgroup label="...Escolha...">
+                    <option value="russian">Russo</option>
+                    <option value="american">Americano</option>
+                    <option value="brazilian">Brasileiro</option>
+                    <option value="spanish">Espanhol</option>
+                </optgroup>
+            </select>
+            <label for="sex">- Gênero: </label>
+            <label id="sex" for="M">M</label>
+            <input type="radio" name="M" id="M">
+            <label id="sex" for="F">F</label>
+            <input type="radio" name="F" id="F">
+            <label id="sex" for="O">O</label>
+            <input type="radio" name="O" id="O">
+        </section>
+        <br>
+        <section>
+            <p>Suas principais qualidades:</p>
+            <label for="int">Inteligência</label>
+            <input type="checkbox" name="int" id="int">
+            <label for="res">| Resiliência</label>
+            <input type="checkbox" name="res" id="res">
+            <label for="phisic">| Preparo Físico</label>
+            <input type="checkbox" name="phisic" id="phisic">
+            <label for="ed">| Educação</label>
+            <input type="checkbox" name="ed" id="ed">
+        </section>
+        <br>
+        <section>
+            <textarea name="reason" id="reason" cols="30" rows="10"
+                placeholder="Porque você gostaria de ser um astrounauta?"></textarea>
+        </section>
+        <br>
+        <section>
+            <input type="submit" value="Criar">
+        </section>
     </form>
 </body>
 
