@@ -1,35 +1,31 @@
 const userList =
     [
         {
-            nome: 'Gabryel',
+            name: 'Gabryel',
             username: 'gb.'
         },
         {
-            nome: 'Lucas',
-            username: 'Lorem'
+            name: 'James',
+            username: 'J'
         },
         {
-            nome: 'Julianna',
-            username: 'julie'
+            name: 'Claire',
+            username: 'cleire'
         }
-    ];
+    ]
 
-userList.push({
-    nome: 'Guilherme',
-    username: 'GUI!'
-});
-
-const newUser = {
-    nome: 'João',
-    username: 'jP'
-};
+const newUser =
+{
+    name: 'Gabryel',
+    username: 'gb.'
+}
 
 const hasUser = userList.find((user) => {
     return user.username === newUser.username
-});
-
+})
 if (!hasUser) {
     userList.push(newUser)
-};
+}
+const resultado = userList
 
-console.log(userList);
+console.log(userList)
