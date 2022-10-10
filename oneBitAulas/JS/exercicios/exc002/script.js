@@ -1,3 +1,6 @@
+//A quantidade de if else KKKKKKKKKKKK eu si divirto 😂🤣
+
+
 const pilotName = prompt('Informe o seu nome, piloto: ')
 let vel = 0
 let velocity = parseInt(prompt('Qual a velocidade que você gostaria de acelerar a nave?'))
