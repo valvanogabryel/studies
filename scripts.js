@@ -1,6 +1,6 @@
-let spaceship = 'Falcon-9';
+const spaceship = 'Falcon-9';
 
-const isFalcon = spaceship === 'Falcon-9';
+let isFalcon = spaceship === 'Falcon-9';
 
 if (!isFalcon) {
     const vel = 80;
