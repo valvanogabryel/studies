@@ -2,6 +2,7 @@ const spaceship = 'Falcon-9';
 
 let isFalcon = spaceship === 'Falcon-9';
 
+
 if (!isFalcon) {
     const vel = 80;
     console.log(`Your spaceship is ${spaceship}, witch has a velocity of ${vel}Km/h.`);
@@ -11,6 +12,3 @@ if (!isFalcon) {
     console.log(`Your spaceship is ${spaceship}, witch has a velocity of ${vel}Km/h`);
     console.log(vel >= 100 ? 'Yes' : 'No');
 };
-
-
-
