@@ -16,59 +16,59 @@ if (conf == true) {
             let vel = parseInt(prompt('Qual a velocidade que você gostaria de acelerar a nave?'))
             confirm(`Você sairá com a velocidade de ${vel}Km/h. Tudo pronto?`)
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         } else if (vel < 40) {
             alert('Você está devagar, podemos aumentar mais.')
             let vel = parseInt(prompt('Qual a velocidade que você gostaria de acelerar a nave?'))
             confirm(`Você sairá com a velocidade de ${vel}Km/h. Tudo pronto?`)
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         } else if (vel >= 40 && vel < 80) {
             alert('Parece uma boa velociade para manter.')
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         } else if (vel >= 80 && vel <= 100) {
             alert('Velocidade alta. Considere diminuir.')
             let vel = parseInt(prompt('Qual a velocidade que você gostaria de acelerar a nave?'))
             confirm(`Você sairá com a velocidade de ${vel}Km/h. Tudo pronto?`)
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         } else {
             alert('Velocidade perigosa. Controle automático forçado')
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         }
     } else {
         let vel = parseInt(prompt('Por favor, insira um valor coerente.'))
-        confirm(`Você sairá com a velocidade de ${vel}Km/h. Tudo pronto?`)
+        confirm(`Você sairá com a velocidade de ${vel} Km/h. Tudo pronto?`)
         printPilot.innerText = `${pilotName}`
-        printVel.innerText = `${vel}Km/h.`
+        printVel.innerText = `${vel} Km/h.`
         if (vel <= 0) {
             alert('A nave está parada. Considere partir e aumentar a velocidade.')
             let vel = parseInt(prompt('Qual a velocidade que você gostaria de acelerar a nave?'))
             confirm(`Você sairá com a velocidade de ${vel}Km/h. Tudo pronto?`)
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         } else if (vel < 40) {
             alert('Você está devagar, podemos aumentar mais.')
             let vel = parseInt(prompt('Qual a velocidade que você gostaria de acelerar a nave?'))
             confirm(`Você sairá com a velocidade de ${vel}Km/h. Tudo pronto?`)
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         } else if (vel >= 40 && vel < 80) {
             alert('Parece uma boa velociade para manter.')
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         } else if (vel >= 80 && vel <= 100) {
             alert('Velocidade alta. Considere diminuir.')
             let vel = parseInt(prompt('Qual a velocidade que você gostaria de acelerar a nave?'))
             confirm(`Você sairá com a velocidade de ${vel}Km/h. Tudo pronto?`)
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         } else {
             alert('Velocidade perigosa. Controle automático forçado')
             printPilot.innerText = `${pilotName}`
-            printVel.innerText = `${vel}Km/h.`
+            printVel.innerText = `${vel} Km/h.`
         }
     }
 } else {
@@ -81,9 +81,9 @@ function mudarVel() {
     const printVel = document.getElementById('shipVel')
     if (conf == true) {
         let vel = parseInt(prompt('Qual a velocidade que você gostaria de acelerar a nave?'))
-        confirm(`Você sairá com a velocidade de ${vel}Km/h. Tudo pronto?`)
+        confirm(`Você sairá com a velocidade de ${vel} Km/h. Tudo pronto?`)
         printPilot.innerText = `${pilotName}`
-        printVel.innerText = `${vel}Km/h.`
+        printVel.innerText = `${vel} Km/h.`
     } else {
         alert('Atemsaum, Atemsaum. O piloto está com medo!')
         document.body.style.backgroundColor = 'black'
