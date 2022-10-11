@@ -12,3 +12,7 @@ if (!isFalcon) {
     console.log(`Your spaceship is ${spaceship}, witch has a velocity of ${vel}Km/h`);
     console.log(vel >= 100 ? 'Yes' : 'No');
 };
+
+
+
+
