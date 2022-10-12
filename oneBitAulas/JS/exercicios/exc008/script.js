@@ -10,7 +10,6 @@ function desaccelerate(brake, printer) {
         // Callback de impressão de alert
         printer(shipVelocity)
     }
-    return shipVelocity
 }
 
 const printVelocity = shipVelocity => {
@@ -19,7 +18,5 @@ const printVelocity = shipVelocity => {
         alert(`Espaçonave parada. Comportas abrindo.`)
     }
 }
-
-
 
 desaccelerate(20, printVelocity);
