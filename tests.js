@@ -19,30 +19,29 @@ console.log('--------------------------------------------')
 
 
 const userList =
-[
-    {
-        name: 'Gabryel',
-        username: 'gb.'
-    },
-    {
-        name: 'James',
-        username: 'J'
-    },
-    {
-        name: 'Claire',
-        username: 'cleire'
-    }
-]
+    [
+        {
+            name: 'Gabryel',
+            username: 'gb.'
+        },
+        {
+            name: 'James',
+            username: 'J'
+        },
+        {
+            name: 'Claire',
+            username: 'cleire'
+        }
+    ]
 
-const newUser = 
+const newUser =
 {
     name: 'Gabryel',
     username: 'gb.'
 }
 
-const hasUser = userList.find((user) => {
-    return user.username === newUser.username
-})
+const hasUser = userList.find((user) => user.username === newUser.username);
+
 if (!hasUser) {
     userList.push(newUser)
 }
