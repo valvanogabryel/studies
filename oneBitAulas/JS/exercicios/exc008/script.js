@@ -1,11 +1,7 @@
 function desaccelerate(velocity, printer) {
     let shipVelocity = 150;
-    for (let stop = 0; shipVelocity > stop; shipVelocity - 20) {
-        let newVelocity = shipVelocity
-        console.log(newVelocity)
-    }
 
-
+    let newVelocity = shipVelocity - velocity
 
 
     printer(newVelocity);
@@ -14,4 +10,6 @@ function desaccelerate(velocity, printer) {
 }
 
 
-desaccelerate()
+desaccelerate(50, () => {
+    console.log(`Estamos diminuindo: velocidade ${velocity}`)
+})
