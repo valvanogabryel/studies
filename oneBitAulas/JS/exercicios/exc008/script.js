@@ -13,7 +13,7 @@ function desaccelerate(brake, printer) {
     return shipVelocity
 }
 
-let printVelocity = shipVelocity => {
+const printVelocity = shipVelocity => {
     alert(`Diminuindo a velocidade: ${shipVelocity}Km/s`)
     if (shipVelocity == 0) {
         alert(`Espaçonave parada. Comportas abrindo.`)
@@ -22,4 +22,4 @@ let printVelocity = shipVelocity => {
 
 
 
-desaccelerate(20, printVelocity)
+desaccelerate(20, printVelocity);
