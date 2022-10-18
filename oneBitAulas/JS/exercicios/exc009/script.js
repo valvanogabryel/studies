@@ -15,7 +15,7 @@ let firstPendentHitch = hitchedSpaceships.findIndex(spaceship => {
     return spaceship[2] == false
 });
 
-console.log(firstPendentHitch)
+console.log(firstPendentHitch);
 
 const firstPlataformPendent = firstPendentHitch += 1;
 
