@@ -4,11 +4,14 @@ class Spaceships {
         this.crewQuantity = crewQuantity;
         this.isHitched = false;
         this.entranceDoorsOpen = false;
-    } hitch() {
+    }
+    hitch() {
         this.isHitched = true;
         this.entranceDoorsOpen = true
     }
 }
+
+let hitchedSpaceships = []
 
 function createSpaceship() {
     let spaceshipName = prompt('Digite o nome da nave: ')
@@ -17,7 +20,13 @@ function createSpaceship() {
     return spaceship
 }
 
-
+function printShips(spaceships) {
+    let spaceshipList = ''
+    spaceships.forEach((spaceship, index) => {
+        spaceshipList += `${(index + 1)} - Nave: ${spaceship.name}\nTripulantes: ${spaceship.crewQuantity}\n`
+    })
+    alert(spaceshipList);
+}
 
 function showMenu() {
     let chosenOption;
@@ -26,20 +35,17 @@ function showMenu() {
         switch (chosenOption) {
             case 1:
                 let spaceshipToAdd = createSpaceship()
-
-
+                spaceshipToAdd.hitch()
+                hitchedSpaceships.push(spaceshipToAdd)
                 break
             case 2:
-
+                printShips(hitchedSpaceships)
                 break
 
             default:
                 alert('Valor inválido');
         }
-
-
-
-
     } while (chosenOption != 3)
-
 }
+
+showMenu()
