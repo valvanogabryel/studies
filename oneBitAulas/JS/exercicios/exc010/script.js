@@ -22,6 +22,7 @@ function accelerate() {
 function stop() {
     let confirmation = confirm('Desejas parar?')
     confirmation === true ? alert(`Nave: ${spaceship.name}\nTipo: ${spaceship.type}\nVelocidade: ${spaceship.velocity}\n Velocidade máxima: ${spaceship.maxVelocity}`) : showMenu()
+    spaceship.velocity = 0
 };
 
 function showMenu() {
