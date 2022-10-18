@@ -12,17 +12,17 @@ function registerSpaceship() {
 }
 
 function accelerate() {
-    let acceleration = parseInt(prompt('O quanto desejas acelerar?'))
+    let acceleration = parseInt(prompt('O quanto desejas acelerar?'));
     spaceship.speedUp(acceleration)
     if (spaceship.velocity >= spaceship.maxVelocity) {
         alert(`VELOCIDADE MÁXIMA ULTRAPASSADA!!!\n\nVelocidade atual: ${spaceship.velocity}\nVelocidade máxima: ${spaceship.maxVelocity}`)
     }
-}
+};
 
 function stop() {
     let confirmation = confirm('Desejas parar?')
     confirmation === true ? alert(`Nave: ${spaceship.name}\nTipo: ${spaceship.type}\nVelocidade: ${spaceship.velocity}\n Velocidade máxima: ${spaceship.maxVelocity}`) : showMenu()
-}
+};
 
 function showMenu() {
     let chosenOption;
@@ -41,7 +41,7 @@ function showMenu() {
     } while (chosenOption != 2)
 };
 
-registerSpaceship()
+registerSpaceship();
 
-showMenu()
+showMenu();
 
