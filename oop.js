@@ -1,4 +1,8 @@
-class Spaceship {
+class SpacialStation {
+    constructor(name, platformsQuantity) {
+        this.name = name;
+        this.platformsQuantity = platformsQuantity;
+    }
 }
 
-let mySpaceship = new Spaceship()
+let observatory = new SpacialStation('Observatório', 40)
