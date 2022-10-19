@@ -1,51 +1,51 @@
-class Spaceships {
+class Spaceship {
     constructor(name, crewQuantity) {
         this.name = name;
         this.crewQuantity = crewQuantity;
-        this.isHitched = false;
+        this.isHitched = false
         this.entranceDoorsOpen = false;
     }
     hitch() {
         this.isHitched = true;
-        this.entranceDoorsOpen = true
+        this.entranceDoorsOpen = true;
     }
+};
+
+function registerSpaceship() {
+    let spaceshipName = prompt('Digite o nome da nave: ');
+    let spaceshipCrewQuantity = prompt('Informe o número de tripulantes: ');
+    let spaceship = new Spaceship(spaceshipName, spaceshipCrewQuantity);
+    return spaceship;
 }
 
-let hitchedSpaceships = []
-
-function createSpaceship() {
-    let spaceshipName = prompt('Digite o nome da nave: ')
-    let spaceshipCrew = prompt('Informa a quantidade de tripulantes na nave: ')
-    let spaceship = new Spaceships(spaceshipName, spaceshipCrew)
-    return spaceship
-}
-
-function printShips(spaceships) {
-    let spaceshipList = ''
+function printSpaceships(spaceships) {
+    let spaceshipList = "";
     spaceships.forEach((spaceship, index) => {
-        spaceshipList += `${(index + 1)} - Nave: ${spaceship.name}\nTripulantes: ${spaceship.crewQuantity}\n`
-    })
+        spaceshipList += `${(index + 1)}- Nave: ${spaceship.name} (${spaceship.crewQuantity} tripulantes).\n`
+    });
     alert(spaceshipList);
 }
+
+let hitchedSpaceships = [];
 
 function showMenu() {
     let chosenOption;
     do {
-        chosenOption = parseInt(prompt('Deseja:\n\n1- Realizar engate\n2- Imprimir naves na tela\n 3- Encerrar o programa'))
+        chosenOption = parseInt(prompt('O que deseja fazer?\n1- Realizar engate\n2- Imprimir naves na tela\n3- Encerrar programa.'))
         switch (chosenOption) {
             case 1:
-                let spaceshipToAdd = createSpaceship()
+                let spaceshipToAdd = registerSpaceship()
                 spaceshipToAdd.hitch()
                 hitchedSpaceships.push(spaceshipToAdd)
                 break
             case 2:
-                printShips(hitchedSpaceships)
+                printSpaceships(hitchedSpaceships);
                 break
-
-            default:
-                alert('Valor inválido');
+            case 3:
+                alert('Encerrando programa...')
+                break
         }
-    } while (chosenOption != 3)
+    } while (chosenOption !== 3)
 }
 
 showMenu()
