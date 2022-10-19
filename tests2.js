@@ -1,24 +1,20 @@
-const spaceship = {
-    name: 'Fenix',
-    crewQuantity: 7,
-    type: 'Batalha',
-    isHitched: [true, false]
+const fruits = ['Apple', 'Banana', 'Kiwi', 'Orange'];
+
+for (i of fruits) {
+    console.log(i)
+}
+for (let i = 0; i < 10; i++) {
+    console.log(i)
+    if (i == 5) {
+        break
+    }
 }
 
-spaceship.shieldLevel = 100
-
-linha()
-
-spaceship.isHitched[0] ? console.log(`O nome da espaçonave é ${spaceship.name}. Ela tem, no momento, ${spaceship.crewQuantity} tripulantes. Ela é do tipo ${spaceship.type}. E ela está engatada à plataforma.`) : console.log(`O nome da espaçonave é ${spaceship.name}. Ela tem, no momento, ${spaceship.crewQuantity} tripulantes. Ela é do tipo ${spaceship.type}. E ela NÃO está engatada à plataforma.`);
-
-linha()
-
-console.log(spaceship)
-
-linha()
-
-function linha() {
-    console.log('-------------------------------------------------')
+for (let c = 0; c <= 10; c++) {
+    if (c == 5) {
+        continue
+    }
+    console.log(c)
 }
 
 
