@@ -49,24 +49,22 @@ console.log(artemis)
 
 // ----------------------------------------------------------------------- //
 
-class TransportSpaceship {
+class Spacialship {
+    static get decaccelerationRate() {
+        return 0.15
+    }
     constructor(name) {
         this.name = name;
         this.currentVelocity = 0;
     }
-    set velocity(newVecocity) {
-        if (newVecocity > 120) {
-            this.currentVelocity = 120
-        } else {
-            this.currentVelocity = newVecocity;
-        }
+
+    speedUp(acceleration) {
+        this.currentVelocity += acceleration * (1 - Spacialship.decaccelerationRate)
     }
 }
 
-const transporter = new TransportSpaceship('Transportadora')
+const shipper = new Spacialship('Apollo')
 
-console.log(transporter);
+shipper.speedUp(150)
 
-transporter.velocity = 800;
-
-console.log(transporter);
+console.log(shipper)
