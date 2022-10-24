@@ -45,3 +45,24 @@ artemis.speedUp(10)
 artemis.speedUp(15)
 
 console.log(artemis)
+
+
+class Captain {
+    constructor(name, age, flightHours) {
+        this.name = name;
+        this.age = age;
+        this.flightHours = flightHours
+    }
+}
+
+class SpacialShip {
+    constructor(name, crewQuantity, captainName, captainAge, captainFlightHours) {
+        this.name = name;
+        this.crewQuantity = crewQuantity;
+        this.captain = new Captain(captainName, captainAge, captainFlightHours);
+    }
+}
+
+const ship3 = new SpacialShip('Supernova', 13, 'Phillyps', 30, 13000)
+
+console.log(ship3)
