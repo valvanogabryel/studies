@@ -47,22 +47,26 @@ artemis.speedUp(15)
 console.log(artemis)
 
 
-class Captain {
-    constructor(name, age, flightHours) {
+// ----------------------------------------------------------------------- //
+
+class TransportSpaceship {
+    constructor(name) {
         this.name = name;
-        this.age = age;
-        this.flightHours = flightHours
+        this.currentVelocity = 0;
+    }
+    set velocity(newVecocity) {
+        if (newVecocity > 120) {
+            this.currentVelocity = 120
+        } else {
+            this.currentVelocity = newVecocity;
+        }
     }
 }
 
-class SpacialShip {
-    constructor(name, crewQuantity, captainName, captainAge, captainFlightHours) {
-        this.name = name;
-        this.crewQuantity = crewQuantity;
-        this.captain = new Captain(captainName, captainAge, captainFlightHours);
-    }
-}
+const transporter = new TransportSpaceship('Transportadora')
 
-const ship3 = new SpacialShip('Supernova', 13, 'Phillyps', 30, 13000)
+console.log(transporter);
 
-console.log(ship3)
+transporter.velocity = 800;
+
+console.log(transporter);
