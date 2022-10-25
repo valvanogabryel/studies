@@ -3,7 +3,6 @@ function average(numbers) {
     numbers.forEach((number) => {
         sum += number
     })
-
     const avg = sum / numbers.length
     return avg
 }
