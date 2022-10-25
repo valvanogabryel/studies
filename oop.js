@@ -68,3 +68,4 @@ const shipper = new Spacialship('Apollo')
 shipper.speedUp(150)
 
 console.log(shipper)
+
