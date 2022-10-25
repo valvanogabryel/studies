@@ -3,6 +3,7 @@ function addHouse() {
     let number = document.querySelector('input#number').value;
     let city = document.querySelector('input#city').value;
     let neighbourhood = document.querySelector('input#neighbourhood').value;
+
     let newListValue = document.createElement('li');
     newListValue.innerText = `Área: ${houseArea} | Número: ${number} (${neighbourhood} - ${city})`;
 
