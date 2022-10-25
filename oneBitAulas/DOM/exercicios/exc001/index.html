@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+            margin: auto;
+        }
+
+        input {
+            margin: 9px;
+        }
+
+        li {
+            border: 1px solid black;
+            width: 50vw;
+            height: auto;
+            list-style: none;
+            padding: 5px;
+            margin: 15px auto;
+        }
+
+        button {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Cadastro de casas</h2>
+    <form id="house-form">
+        <p>
+            <label for="number">Número da residência: </label>
+            <input type="number" name="number" id="number" required>
+        </p>
+        <p>
+            <label for="neighbourhood">Bairro: </label>
+            <input type="text" name="neighbourhood" id="neighbourhood" required>
+        </p>
+        <p>
+            <label for="city">Cidade: </label>
+            <input type="text" name="city" id="city" required>
+        </p>
+        <p>
+            <label for="house-area">Área da casa: </label>
+            <input type="text" name="house-area" id="house-area" required>
+        </p>
+        <br>
+        <button onclick="addHouse()" type="button">Adicionar</button>
+    </form>
+
+    <ul id="house-list">
+
+
+
+    </ul>
+    <script src="index.js"></script>
+</body>
+
+</html>
