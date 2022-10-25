@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="addNewPhone()">Novo Telefone</button>
+    <button onclick="printPhones()">Imprimir Telefones</button>
+    <br>
+    <form id="phones">
+        <p>
+            <label>Telefone 1:</label>
+            <input type="text" name="phone">
+        </p>
+    </form>
+
+
+    <script>
+        function addNewPhone() {
+            const phoneGroup = document.querySelector('form#phones');
+            const newPhone = phoneGroup.children[0].cloneNode(true); // o parâmetro do método cloneNode é um valor booleano. Este valor diz respeito à "deep", que identifica se vai ser uma clonagem profunda (filhos e filhos dos filhos até o último elemento) ou não (somente o primeiro filho)
+            const phonePosition = phoneGroup.children.length + 1;
+            newPhone.querySelector('label').innerText = `Telefone ${phonePosition}:`
+            phoneGroup.appendChild(newPhone);
+        }
+
+
+        function printPhones() {
+            let message = '';
+            const phones = document.querySelectorAll('input[name="phone"]');
+            phones.forEach((phone, index) => {
+                message += `Telefone ${index + 1}: ${phone.value}\n`
+            });
+            alert(message);
+        }
+    </script>
+</body>
+
+</html>

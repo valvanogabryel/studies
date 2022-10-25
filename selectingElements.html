@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="show()">Exibir.</button>
+
+    <p>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="fullname">
+    </p>
+
+    <div id="phones">
+        <p>
+            <label for="phone1">Phone 01</label>
+            <input type="text" id="phone1" name="phone">
+        </p>
+        <p>
+            <label for="phone2">Phone 02</label>
+            <input type="text" id="phone2" name="phone">
+        </p>
+    </div>
+
+    <script>
+        function show() {
+            let elements = document.getElementsByTagName('input');
+            console.log(elements)
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
