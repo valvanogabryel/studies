@@ -166,3 +166,11 @@ console.log(station)
 let totalProcessed = Math.round(ResourceProcessStation.calculateProcessInHours(station.monthlyProcessing, 10));
 
 console.log(totalProcessed);
+
+
+
+
+
+
+
+
