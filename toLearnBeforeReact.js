@@ -18,8 +18,8 @@ const user = {
     idade: 19,
     address: {
         street: 'Travessa Laurinda',
-        number: 124,
-    },
+        number: 124
+    }
 };
 console.log(Object.assign(user))
 console.log('--------------------------------------')
