@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light&Dark Mode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            transition: .3s;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        h1 {
+            margin: 15px;
+
+        }
+
+        button {
+            background: #000;
+            color: #fff;
+            padding: 0.60rem 1.5rem;
+            border-radius: 20px;
+            transform: scale(1.5);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        footer {
+            padding: 10px;
+            color: rgba(0, 0, 0, 0.563);
+            background: #7f8584;
+            position: absolute;
+            bottom: 0;
+            width: 100vw;
+            text-align: center;
+        }
+
+        body.dark-mode {
+            background: #000;
+            color: #fff;
+        }
+
+        button.dark-mode {
+            background: #fff;
+            color: #000;
+            border: 2px solid white;
+        }
+
+        button.dark-mode:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        footer.dark-mode {
+            color: rgba(161, 161, 161, 0.563);
+            background: #3e3e3e;
+        }
+    </style>
+</head>
+
+<body id="main__content">
+    <main>
+        <h1>Light Mode ON</h1>
+        <button type="button" onclick="changeTheme(this)">Dark Mode</button>
+    </main>
+    <footer>
+        <p>Basecamp JavaScript &copy; Digital Innovation One</p>
+    </footer>
+    <script>
+        // function changeTheme(btn) {
+        //     const main = document.getElementById('main__content');
+        //     const h = document.querySelector('h1');
+        //     const footer = document.querySelector('footer');
+
+        //     main.classList.toggle('dark-mode');
+        //     btn.classList.toggle('dark-mode');
+        //     footer.classList.toggle('dark-mode');
+
+        //     if (btn.classList.contains('dark-mode')) {
+        //         h.innerText = 'Light Mode OFF'
+        //         btn.innerText = 'Light Mode'
+        //     } else {
+        //         h.innerText = 'Light Mode ON'
+        //         btn.innerText = 'Dark Mode'
+        //     }
+        // }
+
+        //Ou, criando cada função separadamente (leitura mais fácil):
+
+        const main = document.getElementById('main__content');
+        const h = document.querySelector('h1');
+        const footer = document.querySelector('footer');
+        const btn = document.querySelector('button');
+        const darkModeClass = 'dark-mode';
+
+
+        function changeTheme() {
+            changeClasses()
+            changeText()
+        }
+
+        function changeClasses() {
+            main.classList.toggle(darkModeClass);
+            btn.classList.toggle(darkModeClass);
+            footer.classList.toggle(darkModeClass);
+        }
+
+        function changeText() {
+            const lightMode = 'Light Mode';
+            const darkMode = 'Dark Mode';
+            if (btn.classList.contains(darkModeClass)) {
+                h.innerText = lightMode + ' OFF';
+                btn.innerText = lightMode;
+                return;
+            }
+            h.innerText = lightMode + ' ON';
+            btn.innerText = darkMode;
+        }
+
+    </script>
+</body>
+
+</html>
