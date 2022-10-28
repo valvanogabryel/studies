@@ -63,6 +63,4 @@ class App {
         const finalMessage = `Nave: ${this.spaceship.name}\nQuantidade de tripulantes: ${this.spaceship.crewQuantity}\nVelocidade atual: ${this.spaceship.currentVelocity}`
         alert(finalMessage)
     }
-
-
 }
