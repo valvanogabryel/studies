@@ -1,8 +1,9 @@
-/* const fruits = ['Apple', 'Banana', 'Kiwi', 'Orange'];
+const fruits = ['Apple', 'Banana', 'Kiwi', 'Orange'];
 
 for (i of fruits) {
     console.log(i)
 }
+/* 
 for (let i = 0; i < 10; i++) {
     console.log(i)
     if (i == 5) {

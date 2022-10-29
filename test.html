@@ -17,11 +17,19 @@
         const fruitListItems = fruitList.length;
         let listChild;
 
-        for (let i = 0; i < fruitListItems; i++) {
+        for (let i in fruitList) {
             listChild = document.createElement('li');
             listChild.innerText = fruitList[i];
             listParent.appendChild(listChild)
         }
+
+
+
+        // for (let i = 0; i < fruitListItems; i++) {
+        //     listChild = document.createElement('li');
+        //     listChild.innerText = fruitList[i];
+        //     listParent.appendChild(listChild)
+        // }
     </script>
 </body>
 
