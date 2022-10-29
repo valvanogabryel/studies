@@ -5,8 +5,11 @@ const hitchedSpaceships = [
     ['Golias', 10, true],
     ['Helmet', 5, false],
     ['Elemental', 3, true],
-    ['Darwin', 15, false]
+    ['Darwin', 15, false],
+    ['Puller', 12, true]
 ];
+
+hitchedSpaceships.push(['Supernova', 10, false])
 
 const filter9Crew = hitchedSpaceships.filter(spaceship => spaceship[1] > 9).map(spaceship => spaceship[0]).join(' e ')
 console.log(filter9Crew);
