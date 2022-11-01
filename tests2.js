@@ -168,6 +168,27 @@ let totalProcessed = Math.round(ResourceProcessStation.calculateProcessInHours(s
 
 console.log(totalProcessed);
 
+let spaceship = {
+    name: 'Colossus',
+    crewQuantity: 10
+};
+
+let { name: spaceshipName, crewQuantity } = spaceship
+
+console.log(spaceshipName, crewQuantity)
+
+
+
+
+
+
+
+
+
+
+
+
+
 let spaceships = ['Colossus', 'Puller', 'Fênix', 'Supernova'];
 
 
