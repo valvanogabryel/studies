@@ -9,3 +9,6 @@ function greetCrew(message, ...name) {
 }
 
 greetCrew('Seja bem-vindo', 'Arthur', 'Melissa', 'Jake', 'Robert');
+
+
+let promise = Promise.resolve()
