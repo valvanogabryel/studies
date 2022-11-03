@@ -1,9 +1,10 @@
+const newLocal = "@babel/preset-env"
 const presets = [
     [
-        "@babel/preset-env",
+        newLocal,
         {
-            useBuiltIns: 'usage',
-            corejs: "3.26.0"
+            useBuiltIns: "usage",
+            corejs: "3.3.2"
         }
     ]
 ]
