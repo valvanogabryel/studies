@@ -1,0 +1,1 @@
+new Promise((function(o,e){setTimeout((()=>{console.log("Aceleração inválida"),e("Não possui aceleração")}),1e3)})),console.log("Execução de promises");
