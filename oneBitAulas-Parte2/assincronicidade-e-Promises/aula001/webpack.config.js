@@ -11,15 +11,20 @@ module.exports = {
     },
 
     module: {
-        test: /\.js$/,
-        use: ['babel-loader']
+        rules: [
+            {
+                test: /\.js$/,
+                use: ['babel-loader']
+            }
+        ]
     },
 
     devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist')
+        },
 
+        compress: true,
+        port: 9000
     }
-
-
-
-
 }
