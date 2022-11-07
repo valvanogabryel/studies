@@ -1,7 +1,7 @@
 let komodoShip = {
     name: 'Komodo',
     velocity: 80,
-    acceleration: 10
+    acceleration: 0
 }
 
 const velocityAfter2Seconds = (velocity, acceleration) => {
@@ -19,9 +19,11 @@ const velocityAfter2Seconds = (velocity, acceleration) => {
     })
 }
 
-velocityAfter2Seconds(komodoShip.velocity, komodoShip.acceleration).then(velocity => { // THEN() É CHAMADO QUANDO A PROMISE DÁ CERTO (RESOLVE())
+velocityAfter2Seconds(komodoShip.velocity, komodoShip.acceleration).then(velocity => {
     komodoShip.velocity = velocity;
     console.log('Depois de acelerar:\n', komodoShip)
+}).catch(message => { //CATCH SÓ É CHAMADO QUANDO A PROMISE DÁ ERRO (REJECT())
+    console.log(`Komodo: ${message}`)
 })
 
 
