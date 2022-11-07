@@ -1,0 +1,1 @@
+(()=>{setTimeout((()=>console.log("Executando após dois segundos")),2e3);let e=0,o=setInterval((()=>{e+=2,console.log(`Executando a cada ${e} segundos`),e>=10&&clearInterval(o)}),2e3)})();
