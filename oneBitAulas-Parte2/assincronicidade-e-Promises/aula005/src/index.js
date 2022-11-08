@@ -15,7 +15,7 @@ const velocityAfter2Seconds = (velocity, acceleration) => {
                 console.log('Aceleração inválida')
                 reject('Não possui aceleração')
             }
-        }, 1000)
+        }, 2000)
     })
 }
 
