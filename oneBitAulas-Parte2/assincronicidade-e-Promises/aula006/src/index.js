@@ -1,32 +1,35 @@
-let komodoShip = {
-    name: 'Komodo',
-    velocity: 80,
-    acceleration: 0
+const spaceship = {
+    name: 'Rontaro',
+    currentBatteryCharge: 50,
+    consumptionPerKms: 0.00008
 }
 
-const velocityAfter2Seconds = (velocity, acceleration) => {
-    return new Promise(function (resolve, reject) {   //PARA USAR O THEN() É NECESSÁRIO RETORNAR A PROMISE
-        setTimeout(() => {
-            if (acceleration > 0) {
-                velocity += acceleration * 2
-                console.log(`Nova velocidade: ${velocity}`)
-                resolve(velocity)
-            } else {
-                console.log('Aceleração inválida')
-                reject('Não possui aceleração')
-            }
-        }, 2000)
+const updtadeBatteryCharge = function (chargeConsumed) {
+    return new Promise((resolve, reject) => {
+        spaceship.currentBatteryCharge -= chargeConsumed;
+        if (spaceship.currentBatteryCharge > 0) {
+            resolve(spaceship.currentBatteryCharge);
+        } else {
+            reject('Bateria esgotada! Nave será desativada em alguns segundos.')
+        }
     })
 }
 
-velocityAfter2Seconds(komodoShip.velocity, komodoShip.acceleration).then(velocity => {
-    komodoShip.velocity = velocity;
-    console.log('Depois de acelerar:\n', komodoShip)
-}).catch(message => { //CATCH SÓ É CHAMADO QUANDO A PROMISE DÁ ERRO (REJECT())
-    console.log(`Komodo: ${message}`)
-})
+const calculateBatteryConsumption = function (velocity, seconds) {
+    return new Promise((resolve, reject) => {
+        if (spaceship.consumptionPerKms <= 0 || velocity <= 0) {
+            reject('Nave está parada.');
+        } else {
+            let chargeConsumed = spaceship.consumptionPerKms * velocity * seconds;
+            resolve(chargeConsumed);
+        }
+    })
+}
 
-
-
-console.log('Execução de promises')
-console.log(komodoShip)
+calculateBatteryConsumption(90, 300).then(chargeConsumed => {
+    return updtadeBatteryCharge(chargeConsumed)
+}).then(newCharge => {
+    console.log(`Carga atual: ${newCharge}`);
+}).catch(error => {
+    console.log(error)
+})  
