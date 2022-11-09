@@ -1,0 +1,1 @@
+(()=>{let e=(70,new Promise(((e,o)=>{e(63)})));let o=new Promise(((e,o)=>{e(.015)}));Promise.all([e,o]).then((e=>console.log(e))).catch((e=>console.log(e)))})();
