@@ -1,0 +1,36 @@
+let users = [
+    'Adriana',
+    'Marcia',
+    'José'
+]
+
+function insertUser(name) {
+    let promise = new Promise((resolve, reject) => {
+        setInterval(() => {
+            users.push(name);
+            let error = false;
+
+            if (!error) {
+                resolve()
+            } else {
+                reject({ msg: 'Erro de qualquer coisa.' })
+            }
+        }, 1000)
+    })
+    return promise
+}
+
+function printUsers() {
+    console.log(users)
+}
+
+insertUser('Gabryel')
+    .then(printUsers)
+    .catch(err => console.log(err))
+
+insertUser('Nicolas')
+    .then(printUsers)
+    .catch(err => console.log(err))
+
+
+printUsers()
