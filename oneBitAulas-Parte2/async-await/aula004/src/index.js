@@ -33,7 +33,6 @@ async function moveAndFire(x, y, z) {
         let promiseResult = await Promise.all([adjustPositionPromise, loadAmmoPromise]);
         let newCoordinates = promiseResult[0]
 
-
         console.log(`Arma ajustada para as coordenadas (${newCoordinates[0]}, ${newCoordinates[1]}, ${newCoordinates[2]})`)
         let fireCoordinates = await fire(...newCoordinates);
         console.log(`Atirando para as coordenadas (${fireCoordinates[0]}, ${fireCoordinates[1]}, ${fireCoordinates[2]})`)
