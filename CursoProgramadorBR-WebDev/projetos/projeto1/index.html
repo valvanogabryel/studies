@@ -18,6 +18,17 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            height: 100vh;
+            background: no-repeat;
+            background-image: linear-gradient(to bottom, #460488, #005870);
+            box-shadow: inset 20px 20px 40px;
+        }
+
+        .page-title {
+            position: absolute;
+            top: 10%;
+            text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.702);
+            animation: scale 1s infinite;
         }
 
         button {
@@ -25,17 +36,24 @@
             padding: 15px 5px;
             margin: 50px 0 0 0;
             background: transparent;
+            border: 2px solid #fff;
             border-radius: 5px;
             cursor: pointer;
             font-weight: 900;
             font-size: 1.5rem;
-            transition: .2s;
+            color: #fff;
+            position: absolute;
+            bottom: 60%;
         }
 
         button:hover {
-            background: #000;
+            background-image: linear-gradient(to left, #460488, #005870);
             color: #fff;
             text-decoration: underline;
+        }
+
+        button:disabled {
+            opacity: .5;
         }
 
         h1 {
@@ -44,12 +62,31 @@
             position: absolute;
             top: 50%;
             transform: translate(0, -50%);
+            color: #fff;
+        }
+
+        @keyframes scale {
+            0% {
+                transform: scale(1);
+            }
+
+
+            50% {
+                transform: scale(1.5);
+                text-decoration: underline;
+            }
+
+
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 
 </head>
 
 <body>
+    <h1 class="page-title">Página de Sorteio</h1>
     <button>Sortear!</button>
     <h1 id="res"></h1>
 
@@ -83,12 +120,15 @@
             'João Vitor'
         ];
 
-        document.querySelector('button').addEventListener('click', () => {
+        document.querySelector('button').addEventListener('click', (event) => {
             const result = document.getElementById('res');
-            let sortedNumber = Math.round(Math.random() * (person.length - 1) + 1);
+            let sortedNumber = Math.floor(Math.random() * person.length);
             let sortedName = person[sortedNumber];
 
             result.innerHTML = `${sortedName} (${sortedNumber})`;
+
+            event.target.disabled = true;
+            event.target.innerHTML = 'Sorteado.'
         });
     </script>
 </body>
