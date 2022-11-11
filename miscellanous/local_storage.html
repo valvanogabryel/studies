@@ -14,18 +14,19 @@
 
     <script>
         onload = () => {
-            let nome = localStorage.getItem("nome")
-        }
+            let nome = localStorage.getItem("nome");
+            let title = document.getElementById('nome');
+            title.innerHTML = nome;
+        };
 
         function atualizar(element) {
             let inputValue = element.value;
-            let title = document.getElementById('nome')
+            let title = document.getElementById('nome');
             title.innerHTML = inputValue;
 
             localStorage.setItem("nome", inputValue);
-
-            localStorage.getItem("nome")
-        }
+            localStorage.getItem("nome");
+        };
     </script>
 </body>
 
