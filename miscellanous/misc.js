@@ -16,7 +16,7 @@ let isGrandChampion = () => {
     }
 }
 
-while (isGrandChampion() == false) {
+while (!isGrandChampion) {
     console.log('Melhore...');
 }
 
