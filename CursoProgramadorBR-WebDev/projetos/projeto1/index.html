@@ -28,11 +28,11 @@
             position: absolute;
             top: 10%;
             text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.702);
-            animation: scale 1s infinite;
+            animation: scale 1s forwards;
         }
 
         button {
-            width: 10vw;
+            min-width: 10vw;
             padding: 15px 5px;
             margin: 50px 0 0 0;
             background: transparent;
@@ -65,6 +65,12 @@
             color: #fff;
         }
 
+        h1:first-child::after {
+            content: '|';
+            animation: blink .7s infinite;
+            opacity: 1;
+        }
+
         @keyframes scale {
             0% {
                 transform: scale(1);
@@ -73,7 +79,6 @@
 
             50% {
                 transform: scale(1.5);
-                text-decoration: underline;
             }
 
 
@@ -81,11 +86,23 @@
                 transform: scale(1);
             }
         }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
     </style>
 
 </head>
 
-<body>
+<body onload="writeTitle()">
     <h1 class="page-title">Página de Sorteio</h1>
     <button>Sortear!</button>
     <h1 id="res"></h1>
@@ -130,6 +147,18 @@
             event.target.disabled = true;
             event.target.innerHTML = 'Sorteado.'
         });
+
+        function writeTitle() {
+            const title = document.querySelector('.page-title');
+            const titleArray = title.innerHTML.split('');
+            title.innerHTML = '';
+
+            titleArray.forEach((letter, index) => {
+                setTimeout(() => {
+                    title.innerHTML += letter;
+                }, 75 * index);
+            });
+        };
     </script>
 </body>
 
