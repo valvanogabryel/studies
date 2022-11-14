@@ -1,19 +1,29 @@
 function reverseArray(arr) {
-    let output = [];
+    const reversedArray = [];
     for (let i = arr.length - 1; i >= 0; i--) {
-        output.push(arr[i]);
+        reversedArray.push(arr[i]);
     }
-    return output
+    return reversedArray
 }
 
 // OU 
 
 // function reverseArray(arr) {
-//     let output = [];
+//     const reversedArray = [];
 //     while (arr.length) {
-//         output.push(arr.pop())
+//         reversedArray.push(arr.pop())
 //     }
-//     return output;
+//     return reversedArray;
+// }
+
+// OU 
+
+// function reverseArray(arr) {
+//     const reversedArray = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         reversedArray[i] = arr[arr.length - i - 1];
+//     }
+//     return reversedArray
 // }
 
 console.log(reverseArray([0, 9, 6, 8, 9, 1, 5, 7]));
