@@ -1,7 +1,7 @@
 let komodoShip = {
     name: 'Komodo',
     velocity: 80,
-    acceleration: 0
+    acceleration: 10
 }
 
 const velocityAfter2Seconds = (velocity, acceleration) => {
