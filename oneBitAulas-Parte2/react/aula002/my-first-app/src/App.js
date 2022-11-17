@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloWorld from './Hello';
+import Planets from './components/planets';
 
 
 
@@ -7,7 +7,7 @@ import HelloWorld from './Hello';
 function App() {
   return (
     <div>
-      <HelloWorld />
+      <Planets />
     </div>
   );
 }
