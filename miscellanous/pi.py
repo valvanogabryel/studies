@@ -7,7 +7,7 @@ def dummy():
     i += 1
 
 
-if 5 + 5 == 2:
+if 5 + 5 == 10:
     {
         print('ojojo')
     }

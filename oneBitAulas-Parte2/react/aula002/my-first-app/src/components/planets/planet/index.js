@@ -1,14 +1,19 @@
-import React, { Fragment } from 'react';
-import './style.css'
+import React from 'react';
+import GrayImage from '../../shared/gray_img';
+import DescriptionWithLink from '../../shared/description_with_link';
 
-const Planet = () => {
+const Planet = (props) => {
+    let title;
+    if (props.title_with_underline) title = <h4><u>{props.name}</u></h4>
+    else title = <h4>{props.name}</h4>;
+
     return (
-        <div>
-            <h4>Mercúrio</h4>
-            <p class="red">Mercúrio é o menor e mais interno planeta do Sistema Solar, orbitando o Sol a cada 87,969 dias terrestres. A sua órbita tem a maior excentricidade e o seu eixo apresenta a menor inclinação em relação ao plano da órbita dentre todos os planetas do Sistema Solar. </p>
-            <img src="https://pt.wikipedia.org/wiki/Ficheiro:Mercury_in_color_-_Prockter07-edit1.jpg"></img>
+        <div onClick={() => props.clickOnPlanet(props.name)}>
+            {title}
+            <DescriptionWithLink description={props.description} link={props.link} name={props.name} />
+            <GrayImage img_url={props.img_url} />
         </div>
     );
 };
 
-export default Planet
+export default Planet;
