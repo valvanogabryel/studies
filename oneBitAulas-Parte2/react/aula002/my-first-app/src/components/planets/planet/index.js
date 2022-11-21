@@ -22,7 +22,9 @@ const Planet = (props) => {
             <hr></hr>
             <h4>Asteróides</h4>
             <ul>
-                {['B89734', 'D00188', '01LKLNM', '10OMJM'].map(n => <li>{n}</li>)}
+                {['B89734', 'D00188', '01LKLNM', '10OMJM']
+                    .map(n => <li>{n}</li>)
+                }
             </ul>
         </div>
     );
