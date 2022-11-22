@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import GrayImage from '../../shared/gray_img';
 import DescriptionWithLink from '../../shared/description_with_link';
 
@@ -8,45 +8,38 @@ const getSatellites = async (id) => {
     return data;
 };
 
-export default class Planet extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            satellites: []
-        };
-    };
+const Planet = props => {
+    const [satellites, setSatellites] = useState([])
 
-    componentDidMount() {
-        getSatellites(this.props.id)
+    useEffect(() => {
+        getSatellites(props.id)
             .then(data => {
-                this.setState(state => ({
-                    satellites: data['satellites']
-                }));
+                setSatellites(data['satellites'])
             });
-    };
+    }, []);
 
-    render() {
-        let title;
-        if (this.props.title_with_underline) title = <h4><u>{this.props.name}</u></h4>
-        else title = <h4>{this.props.name}</h4>;
+    let title;
+    if (props.title_with_underline) title = <h4><u>{props.name}</u></h4>
+    else title = <h4>{props.name}</h4>;
 
-        return (
-            <div onClick={() => this.props.clickOnPlanet(this.props.name)}>
-                {title}
-                < DescriptionWithLink description={this.props.description} link={this.props.link} name={this.props.name} />
-                <GrayImage img_url={this.props.img_url} gray={this.props.gray} />
+    return (
+        <div onClick={() => props.clickOnPlanet(props.name)}>
+            {title}
+            < DescriptionWithLink description={props.description} link={props.link} name={props.name} />
+            <GrayImage img_url={props.img_url} gray={props.gray} />
 
-                <h4>Satelites</h4>
-                <ul>
-                    {this.state.satellites.map((satellite, index) =>
-                        <li key={index}>{satellite.name}</li>
-                    )}
-                </ul>
-                <hr></hr>
-            </div>
-        );
-    };
+            <h4>Satelites</h4>
+            <ul>
+                {satellites.map((satellite, index) =>
+                    <li key={index}>{satellite.name}</li>
+                )}
+            </ul>
+            <hr></hr>
+        </div>
+    );
 };
+
+export default Planet;
 
 
 

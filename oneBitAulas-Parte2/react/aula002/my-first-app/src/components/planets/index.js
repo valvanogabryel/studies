@@ -12,7 +12,6 @@ const getPlanets = async () => {
 }
 
 const Planets = () => {
-
     const [planets, setPlanets] = useState([])
 
     useEffect(() => {
