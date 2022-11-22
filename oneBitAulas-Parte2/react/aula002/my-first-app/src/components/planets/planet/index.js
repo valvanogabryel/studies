@@ -38,11 +38,9 @@ export default class Planet extends React.Component {
 
                 <h4>Satelites</h4>
                 <ul>
-                    {
-                        this.state.satellites.map((satellite, index) => {
-                            return <li key={index}>{satellite.name}</li>
-                        })
-                    }
+                    {this.state.satellites.map((satellite, index) =>
+                        <li key={index}>{satellite.name}</li>
+                    )}
                 </ul>
                 <hr></hr>
             </div>
