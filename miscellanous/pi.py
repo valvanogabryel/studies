@@ -1,15 +1,9 @@
-from ast import If
+def fib(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
 
 
-def dummy():
-    i = 0
-    print(i)
-    i += 1
-
-
-if 5 + 5 == 10:
-    {
-        print('ojojo')
-    }
-else:
-    print('Hello, World!')
+fib(1000)
