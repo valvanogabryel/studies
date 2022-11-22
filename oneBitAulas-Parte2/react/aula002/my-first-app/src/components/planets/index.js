@@ -27,7 +27,7 @@ class Planets extends React.Component {
 
     removeLast = () => {
         let new_planets = [...this.state.planets];
-        new_planets.pop();
+        new_planets.pop()
         this.setState(state => ({
             planets: new_planets
         }));
@@ -48,17 +48,16 @@ class Planets extends React.Component {
                 <button onClick={this.duplicateLastPlanet}>Duplicar o último</button>
                 <hr></hr>
                 {
-                    this.state.planets.map(planet =>
-                        <Planet
+                    this.state.planets.map((planet) => {
+                        return <Planet
                             name={planet.name}
                             description={planet.description}
                             img_url={planet.img_url}
                             link={planet.link}
                             clickOnPlanet={clickOnPlanet}
-                            title_with_underline={true}
                         />
-                    )
-                };
+                    })
+                }
             </Fragment >
         );
     };
