@@ -31,7 +31,7 @@ const Form = (props) => {
                 </div>
                 <div>
                     <label htmlFor="description">Descrição:</label>
-                    <input type="text" id="description" name="description" value={fields.description} onChange={handleFieldsChange}></input>
+                    <textarea type="text" id="description" name="description" value={fields.description} onChange={handleFieldsChange} rows="5" cols="80"></textarea>
                 </div>
                 <div>
                     <label htmlFor="img_url">URL da imagem:</label>

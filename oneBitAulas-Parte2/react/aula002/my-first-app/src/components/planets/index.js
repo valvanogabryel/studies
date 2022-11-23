@@ -2,9 +2,9 @@ import React, { Fragment, useState, useEffect } from 'react';
 import Planet from './planet';
 import Form from './form';
 
-const clickOnPlanet = (name) => {
-    alert(`Um clique no planeta: ${name}`);
-};
+// const clickOnPlanet = (name) => {
+//     alert(`Um clique no planeta: ${name}`);
+// };
 
 const getPlanets = async () => {
     let response = await fetch('http://localhost:3000/api/planets.json');
@@ -46,6 +46,7 @@ const Planets = () => {
             <Form addNewPlanet={addNewPlanet} />
             <hr />
             <br />
+            <hr />
             {
                 planets.map((planet, index) => {
                     return <Planet
@@ -55,7 +56,7 @@ const Planets = () => {
                         img_url={planet.img_url}
                         link={planet.link}
                         title_with_underline
-                        clickOnPlanet={clickOnPlanet}
+                        // clickOnPlanet={clickOnPlanet}
                         key={index}
                     />
                 })
