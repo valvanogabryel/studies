@@ -12,14 +12,14 @@ const getPlanets = async () => {
 }
 
 const Planets = () => {
-    const [planets, setPlanets] = useState([])
+    const [planets, setPlanets] = useState([]);
 
     useEffect(() => {
         getPlanets()
             .then(data => {
                 setPlanets(data['planets'])
-            })
-    }, [])
+            });
+    }, []);
 
     const removeLast = () => {
         let new_planets = [...planets];
