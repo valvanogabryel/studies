@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import Planet from './planet';
+import Form from './form';
 
 const clickOnPlanet = (name) => {
     alert(`Um clique no planeta: ${name}`);
@@ -13,13 +14,13 @@ const getPlanets = async () => {
 
 const Planets = () => {
     const [planets, setPlanets] = useState([]);
-
     useEffect(() => {
         getPlanets()
             .then(data => {
                 setPlanets(data['planets'])
             });
     }, []);
+
 
     const removeLast = () => {
         let new_planets = [...planets];
@@ -32,12 +33,19 @@ const Planets = () => {
         setPlanets([...planets, last_planet]);
     };
 
+    const addNewPlanet = planetToAdd => {
+        setPlanets([...planets, planetToAdd]);
+    };
+
     return (
         <Fragment>
             <h3>Planet List</h3>
             <button onClick={removeLast}>Remover o último</button>
             <button onClick={duplicateLastPlanet}>Duplicar o último</button>
-            <hr></hr>
+            <hr />
+            <Form addNewPlanet={addNewPlanet} />
+            <hr />
+            <br />
             {
                 planets.map((planet, index) => {
                     return <Planet
@@ -51,8 +59,7 @@ const Planets = () => {
                         key={index}
                     />
                 })
-            };
-            <hr></hr>
+            }
         </Fragment >
     );
 };
