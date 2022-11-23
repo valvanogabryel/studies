@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-export default function Example() {
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-        document.title = `You clicked {count} times`
-    });
+const Form = () => {
+    const [name, setName] = useState('');
+    const handleChange = (e) => setName(e.currentTarget.value);
 
     return (
         <div>
-            <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count + 1)}>
-                Click me
-            </button>
+            <label htmlFor="name">Name:</label>
+            <input type={text} id={name} value={name} onChange={handleChange}></input>
         </div>
     );
 };
+
+export default Form;
