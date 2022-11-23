@@ -30,9 +30,11 @@ const Planet = props => {
 
             <h4>Satelites</h4>
             <ul>
-                {satellites.map((satellite, index) =>
-                    <li key={index}>{satellite.name}</li>
-                )}
+                {
+                    satellites.map((satellite, index) =>
+                        <li key={index}>{satellite.name}</li>
+                    )
+                }
             </ul>
             <hr></hr>
         </div>
