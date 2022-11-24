@@ -42,16 +42,18 @@ const initialState = {
 const SatelliteForm = props => {
     const [fields, setFields] = useState(initialState);
 
-    const handleFieldsChange = event => setFields({
-        ...fields,
-        [event.currentTarget.name]: event.currentTarget.value
-    });
+    const handleFieldsChange = event => {
+        setFields({
+            ...fields,
+            [event.currentTarget.name]: event.currentTarget.value
+        });
+    };
 
     const handleSubmit = event => {
         props.addNewSatellite(fields);
         event.preventDefault();
         setFields(initialState);
-    };
+    }
 
     return (
         <Fragment>
@@ -64,11 +66,8 @@ const SatelliteForm = props => {
                 <br />
                 <input type="submit" value="Enviar"></input>
             </form>
-
         </Fragment>
     );
 };
-
-
 
 export default SatelliteForm;
