@@ -1,8 +1,8 @@
-const process = require('process');
+import { stdout, stdin, exit } from 'process';
 
-process.stdout.write('Qual é o seu nome?');
+stdout.write('Qual é o seu nome?');
 
-process.stdin.on('data', (keyboard) => {
-    process.stdout(`Olá, ${keyboard}`);
-    process.exit;
+stdin.on('data', (keyboard) => {
+    stdout(`Olá, ${keyboard}`);
+    exit;
 });
